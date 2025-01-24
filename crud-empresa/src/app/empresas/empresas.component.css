@@ -1,0 +1,94 @@
+.container.mt-4 {
+  background: linear-gradient(to right,
+    rgba(131, 2, 183, 1),
+    rgba(15, 88, 195, 1),
+    rgba(1, 175, 210, 1),
+    rgba(1, 175, 210, 1)
+  );
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  height: 100px;
+}
+
+
+.table {
+  margin-top: 20px;
+  color: white;
+}
+
+.table td,
+.table th {
+  color: rgba(192, 173, 198, 255);
+}
+
+table.table tbody tr:nth-child(odd) {
+  background-color: rgba(192, 173, 198, 255) !important;
+}
+
+table.table tbody tr:nth-child(even) {
+  background-color: rgba(1, 175, 210, 255) !important;
+}
+
+.bg-info {
+  background-color: #d1ecf1 !important;
+}
+
+.bg-success {
+  background-color: #c3e6cb !important;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.btn-gradient:hover {
+  background-image: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+.btn-primary {
+  border-radius: 35px;
+  height: 46px;
+  width: 159px;
+  position: relative;
+  top: -53px;
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, rgba(113, 17, 185, 1), rgba(0, 144, 204, 1));
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 35px;
+  height: 46px;
+  width: 159px;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(to right, rgba(113, 17, 185, 1), rgba(0, 144, 204, 1));
+}
+
+.table td .bi {
+  color: rgba(192, 173, 198, 255);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+.table th:nth-child(5),
+.table th:nth-child(6),
+.table th:nth-child(7) {
+  text-align: right; 
+  position: relative;
+  right: 145px;
+}

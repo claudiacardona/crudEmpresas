@@ -1,0 +1,61 @@
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group.col-md-6 {
+  flex: 0 0 48%;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.container h3, .container h6, .form-group label {
+  color: #9b59b6;
+}
+
+.btn-primary, .btn-secondary {
+  background: linear-gradient(to right, rgba(113, 17, 185, 1), rgba(0, 144, 204, 1));
+  position: relative;
+  top: -55px;
+  height: 44px;
+  width: 163px;
+  border-radius: 21px;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background: linear-gradient(to right, rgba(113, 17, 185, 1), rgba(0, 144, 204, 1));
+}
+
+.btn-primary, .btn-secondary {
+  color: white;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+input[type="email"]:not([readonly]) {
+  pointer-events: auto;  
+  color: #9b59b6;
+}
+
+
+input[type="text"] {
+  color: #9b59b6;
+}
+
+input[type="number"] {
+  color: #9b59b6;
+}

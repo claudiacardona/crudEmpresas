@@ -1,0 +1,85 @@
+<div class="container">
+  <h3>Editar Empresa</h3>
+  <h6>Utiliza los campos para actualizar los datos</h6>
+
+  <div class="form-buttons">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="button" (click)="cancel()" class="btn btn-secondary">Cancelar</button>
+  </div>
+
+  <form (ngSubmit)="save()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="nombreComercial">Nombre Comercial</label>
+        <input
+          type="text"
+          [(ngModel)]="empresa.nombreComercial"
+          id="nombreComercial"
+          name="nombreComercial"
+          class="form-control">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="razonSocial">Razón Social</label>
+        <input
+          type="text"
+          [(ngModel)]="empresa.razonSocial"
+          id="razonSocial"
+          name="razonSocial"
+          class="form-control">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="telefono">Teléfono</label>
+        <input
+          type="number"
+          [(ngModel)]="empresa.telefono"
+          id="telefono"
+          name="telefono"
+          class="form-control">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="correo">Correo Electrónico</label>
+        <input
+          type="email"
+          [(ngModel)]="empresa.correoElectronico"
+          id="correo"
+          name="correo"
+          class="form-control">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="nit">NIT</label>
+        <input
+          type="number"
+          [(ngModel)]="empresa.nit"
+          id="nit"
+          name="nit"
+          class="form-control">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="estado">Estado</label>
+        <select
+          [(ngModel)]="empresa.estado"
+          id="estado"
+          name="estado"
+          class="form-control">
+          <option value="activo">Activo</option>
+          <option value="inactivo">Inactivo</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="direccion">Dirección</label>
+      <textarea
+        [(ngModel)]="empresa.direccion"
+        id="direccion"
+        name="direccion"
+        class="form-control"></textarea>
+    </div>
+  </form>
+</div>

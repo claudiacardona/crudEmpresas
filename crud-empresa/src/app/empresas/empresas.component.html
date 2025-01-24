@@ -1,0 +1,46 @@
+<div class="container mt-4" >
+  <div *ngIf="selectedEmpresa === null && !isEditing" class="d-flex justify-content-between align-items-center">
+    <div *ngIf="selectedEmpresa === null && !isEditing">
+      <h2>Gestión de empresas</h2>
+      <h6>Agrega, edita o elimina número de usuarios.</h6>
+    </div>
+
+    <button *ngIf="!isEditing" class="btn btn-gradient mb-3" (click)="addEmpresa()">Agregar</button>
+  </div>
+
+  <app-empresa-form
+    *ngIf="selectedEmpresa !== null || isEditing"
+    [empresa]="selectedEmpresa || {}"
+    [isEditing]="isEditing"
+    (onSave)="saveEmpresa()"
+    (onCancel)="cancel()">
+  </app-empresa-form>
+
+  <div *ngIf="selectedEmpresa === null && !isEditing">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Estado</th>
+          <th>Nombre</th>
+          <th>E-mail</th>
+          <th>NIT</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empresa of empresas; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ empresa.estado }}</td>
+          <td>{{ empresa.nombreComercial }}</td>
+          <td>{{ empresa.correoElectronico }}</td>
+          <td>{{ empresa.nit }}</td>
+          <td>
+            <button class="btn btn-link text-warning" (click)="editEmpresa(empresa)"><i class="bi bi-pencil-square"></i></button>
+            <button class="btn btn-link text-danger" (click)="deleteEmpresa(empresa.id)"><i class="bi bi-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
